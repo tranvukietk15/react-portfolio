@@ -1,0 +1,166 @@
+.container {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1.4fr 0.5fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Avatar About"
+        "Skills Skills"
+        "Projects Projects"
+        "Education Favorite"
+        "Work-experience Work-experience";
+}
+
+.Avatar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "avt"
+        "info";
+    grid-area: Avatar;
+}
+
+.avt {
+    grid-area: avt;
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". .";
+    grid-area: info;
+}
+
+.About {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 0.6fr 1.8fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "."
+        "."
+        ".";
+    grid-area: About;
+}
+
+.Skills {
+    display: grid;
+    grid-template-columns: 0.2fr 1.8fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "title title"
+        ". ."
+        ". ."
+        ". .";
+    grid-area: Skills;
+}
+
+.title {
+    grid-area: title;
+}
+
+.Projects {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "project-title project-title"
+        "project-info project-desciption";
+    grid-area: Projects;
+}
+
+.project-title {
+    grid-area: project-title;
+}
+
+.project-info {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". ."
+        ". ."
+        ". .";
+    grid-area: project-info;
+}
+
+.project-desciption {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.6fr 1.4fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "."
+        "."
+        ".";
+    grid-area: project-desciption;
+}
+
+.Education {
+    grid-area: Education;
+}
+
+.Favorite {
+    grid-area: Favorite;
+}
+
+.Work-experience {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 0.6fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "work-title work-title"
+        "work-info work-description";
+    grid-area: Work-experience;
+}
+
+.work-title {
+    grid-area: work-title;
+}
+
+.work-info {
+    display: grid;
+    grid-template-columns: 0.8fr 1.3fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". ."
+        ". ."
+        ". .";
+    grid-area: work-info;
+}
+
+.work-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ".";
+    grid-area: work-description;
+}
