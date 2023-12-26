@@ -22,8 +22,7 @@ function PetProjects() {
 				<Row key={`project_${d.name}_${index}`}>
 					<Col md={3} className={d["first"] ? "" : "project-intro"}>
 						<Row>
-							<Col md={4}>Time</Col>
-							<Col>{d.time}</Col>
+							<Col xs={12}>{d.time}</Col>
 						</Row>
 						<Row>
 							<Col md={4}>Name</Col>

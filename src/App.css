@@ -49,7 +49,7 @@
 
 .App .summary {
   font-size: 13pt;
-  text-indent: 50px;
+  text-indent: 20px;
 }
 
 .App .title {
@@ -61,13 +61,9 @@
   margin-top: 20px;
 }
 
-.App .row .col-3 {
-  /* text-transform: uppercase; */
-  font-weight: bold;
-}
-
 .App .row .bold {
   font-weight: bold;
+  overflow-wrap: break-word;
 }
 
 .App .row .details {
@@ -82,7 +78,10 @@
 .App .row .project {
   padding-top: 10px;
   margin-bottom: 10px;
-  border-top: solid 1px;
+}
+
+.App .row .border-bottom {
+  border-bottom: solid 2px;
 }
 
 .App .row.last {
@@ -91,6 +90,15 @@
 
 .App a {
   text-decoration: none !important;
+  overflow-wrap: break-word;
+}
+
+.App .pr-0 {
+  padding-right: 0;
+}
+
+.App .td-under {
+  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
@@ -101,4 +109,8 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.justify-content-md-center {
+  justify-content: center !important;
 }

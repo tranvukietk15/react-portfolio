@@ -34,6 +34,7 @@ function Projects() {
 				`Review code prevent bug early.`,
 			],
 			first: true,
+			className: "border-bottom",
 		},
 		{
 			time: "Apr 2022 - Jun 2023",
@@ -69,6 +70,7 @@ function Projects() {
 				`Discuss with BA to create tasks and assign to member.`,
 				`Mentor member.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Apr 2022 - Feb 2023",
@@ -104,6 +106,7 @@ function Projects() {
 				`Config MongoDb.`,
 				`Mentor member.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Feb 2022 - Apr 2022",
@@ -134,6 +137,7 @@ function Projects() {
 				`Discuss with BA to create tasks and assign to member.`,
 				`Mentor member.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Dec 2021 - Feb 2022",
@@ -166,6 +170,7 @@ function Projects() {
 				`Fix bugs production with trade log in Application Insights.`,
 				`Discuss with BA Singaporean to get requirement.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Dec 2019 - Jul 2021",
@@ -190,6 +195,7 @@ function Projects() {
 				`Involve build table table per hierarchy and calculate point.`,
 				`Fix bugs.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "May 2019 - Dec 2019",
@@ -205,6 +211,7 @@ function Projects() {
 				`Implement Paging.`,
 				`Fix bugs.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Apr 2019 - May 2019",
@@ -218,6 +225,7 @@ function Projects() {
 				`Create form with angularjs allow user register for loans.`,
 				`Validate form.`,
 			],
+			className: "project border-bottom",
 		},
 		{
 			time: "Aug 2018 - Apr 2019",
@@ -229,6 +237,7 @@ function Projects() {
 			technologies: `EF core 2.1, Angular js, SQL, RabbitMQ, ElasticSearch, Fluent
 			API.`,
 			contributed: [`Create API.`, `Maintain.`, `Fix bugs.`],
+			className: "project",
 		},
 	];
 
@@ -236,31 +245,51 @@ function Projects() {
 		<Fragment>
 			{data.map((d, index) => (
 				<Row key={`project_${d.name}_${index}`}>
-					<Col md={3} className={d["first"] ? "" : "project-intro"}>
+					<Col
+						lg={3}
+						xs={12}
+						className={d["first"] ? "" : "project-intro"}
+					>
 						<Row>
-							<Col md={4}>Time</Col>
-							<Col>{d.time}</Col>
+							{/* <Col md={5}>Time</Col> */}
+							<Col xs={12} className="bold td-under">
+								{d.time}
+							</Col>
 						</Row>
 						<Row>
-							<Col md={4}>Name</Col>
-							<Col className="bold">{d.name}</Col>
+							<Col xs={4} className="pr-0">
+								Name
+							</Col>
+							<Col xs={8} className="bold">
+								{d.name}
+							</Col>
 						</Row>
 						<Row>
-							<Col md={4}>Company</Col>
-							<Col className="bold">{d.company}</Col>
+							<Col xs={4} className="pr-0">
+								Company
+							</Col>
+							<Col xs={8} className="bold">
+								{d.company}
+							</Col>
 						</Row>
 						<Row>
-							<Col md={4}>Team size</Col>
-							<Col>{d.teamSize}</Col>
+							<Col xs={4} className="pr-0">
+								Team size
+							</Col>
+							<Col xs={8}>{d.teamSize}</Col>
 						</Row>
 						<Row>
-							<Col md={4}>Position</Col>
-							<Col className="bold">{d.position}</Col>
+							<Col xs={4} className="pr-0">
+								Position
+							</Col>
+							<Col xs={8} className="bold">
+								{d.position}
+							</Col>
 						</Row>
 					</Col>
-					<Col className={d["first"] ? "" : "project"}>
+					<Col lg={9} xs={12} className={d.className}>
 						<Row>
-							<div>{d.detail}</div>
+							<div className="summary">{d.detail}</div>
 							<div className="details bold">TECHNOLOGIES</div>
 							<div>{d.technologies}</div>
 							<div className="details bold">CONTRIBUTED</div>

@@ -12,17 +12,18 @@ function App() {
 		<div className="App">
 			<Container>
 				<Row>
-					<Col md={3}>
+					<Col lg={3} xs={12}>
 						<Row className="justify-content-md-center">
 							<img src={avatar} alt="Kiet Tran" className="avt" />
 						</Row>
-						<Row>
-							<Col>
+						<Row className="justify-content-md-center">
+							{/* <Col md={12} xs={{ span: 6, offset: 3 }}> */}
+							<Col md={12} xs={12}>
 								<Row>
-									<Col xs={2}>
+									<Col sm={2} xs={2}>
 										<MdEmail />
 									</Col>
-									<Col>
+									<Col md={10} xs={10}>
 										<a href="mailto:kiettranv@gmail.com">
 											kiettranv@gmail.com
 										</a>
@@ -32,13 +33,15 @@ function App() {
 									<Col xs={2}>
 										<FaBirthdayCake />
 									</Col>
-									<Col>Nov 1996</Col>
+									<Col md={10} xs={10}>
+										Nov 1996
+									</Col>
 								</Row>
 								<Row>
 									<Col xs={2}>
 										<FaPhoneAlt />
 									</Col>
-									<Col>
+									<Col md={10} xs={10}>
 										<a href="tel:+84949845485">
 											+84 949845485
 										</a>
@@ -48,7 +51,7 @@ function App() {
 									<Col xs={2}>
 										<SiGooglestreetview />
 									</Col>
-									<Col>
+									<Col md={10} xs={10}>
 										District 1, Ho Chi Minh City, VietNam
 									</Col>
 								</Row>
@@ -56,7 +59,7 @@ function App() {
 									<Col xs={2}>
 										<FaLinkedin />
 									</Col>
-									<Col>
+									<Col md={10} xs={10}>
 										<a href="https://www.linkedin.com/in/kiet-tran-555845129/">
 											https://www.linkedin.com/in/kiet-tran-555845129/
 										</a>
@@ -65,7 +68,7 @@ function App() {
 							</Col>
 						</Row>
 					</Col>
-					<Col>
+					<Col lg={9} xs={12}>
 						<div className="name">Trần Vũ Kiệt</div>
 						<div className="position">FULLSTACK DEVELOPER</div>
 						<div className="summary">
@@ -90,57 +93,7 @@ function App() {
 				<Row>
 					<div className="title">Skills</div>
 				</Row>
-				<Row>
-					<Col>
-						<Row>
-							<Col xs={3}>Backend</Col>
-							<Col className="bold">.NET core, NodeJS</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>FrontEnd</Col>
-							<Col>ReactJS, Redux, Bootstrap, Tailwind</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>Database</Col>
-							<Col>
-								MSSQL, MySQL, Postgres, MongoDb, DynamoDb, Redis
-							</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>Framework</Col>
-							<Col>
-								<Row>
-									<Col>.NET core version: 3.1, 5, 6, 7</Col>
-								</Row>
-								<Row>
-									<Col>NestJS, Express</Col>
-								</Row>
-							</Col>
-						</Row>
-					</Col>
-					<Col>
-						<Row>
-							<Col xs={3}>API</Col>
-							<Col>REST API, GRAPHQL</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>Message broker</Col>
-							<Col>SNS - SQS, RabbitMQ, Azure service bus</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>CI/CD</Col>
-							<Col>Azure pipeline, Jenkins</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>Hosting/DNS</Col>
-							<Col>Cloudflare</Col>
-						</Row>
-						<Row>
-							<Col xs={3}>VPS</Col>
-							<Col>EC2, Contabo, Physical server</Col>
-						</Row>
-					</Col>
-				</Row>
+				{Skills()}
 				{/* <Row>
 					<div className="title">Work experience</div>
 				</Row>
@@ -160,28 +113,99 @@ function App() {
 					<div className="title">Education</div>
 				</Row>
 				<Row className="last">
-					<Col xs={4}>
+					<Col lg={4} xs={12}>
 						<Row>
 							<Col xs={3}>School</Col>
-							<Col className="bold">MEKONG UNIVERSITY</Col>
+							<Col xs={9} className="bold">
+								MEKONG UNIVERSITY
+							</Col>
 						</Row>
 						<Row>
 							<Col xs={3}>Major</Col>
-							<Col>INFORMATION TECHNOLOGY</Col>
+							<Col xs={9}>INFORMATION TECHNOLOGY</Col>
 						</Row>
 						<Row>
 							<Col xs={3}>Time</Col>
-							<Col>Oct 2014- Aug 2018</Col>
+							<Col xs={9}>Oct 2014- Aug 2018</Col>
 						</Row>
 						<Row>
 							<Col xs={3}>GPA</Col>
-							<Col>3.6/4</Col>
+							<Col xs={9}>3.6/4</Col>
 						</Row>
 					</Col>
 				</Row>
 			</Container>
 		</div>
 	);
+
+	function Skills() {
+		const leftSkills = [
+			{
+				type: "Backend",
+				skills: [".NET core, NodeJS"],
+				className: "bold",
+			},
+			{
+				type: "FrontEnd",
+				skills: ["ReactJS, Redux, Bootstrap, Tailwind"],
+			},
+			{
+				type: "Database",
+				skills: ["MSSQL, MySQL, Postgres, MongoDb, DynamoDb, Redis"],
+			},
+			{
+				type: "Framework",
+				skills: [".NET core version: 3.1, 5, 6, 7", "NestJS, Express"],
+			},
+		];
+		const rightSkills = [
+			{
+				type: "API",
+				skills: ["REST API, GRAPHQL"],
+			},
+			{
+				type: "Message broker",
+				skills: ["SNS - SQS, RabbitMQ, Azure service bus"],
+			},
+			{
+				type: "CI/CD",
+				skills: ["Azure pipeline, Jenkins"],
+			},
+			{
+				type: "Hosting/DNS",
+				skills: ["Cloudflare"],
+			},
+			{
+				type: "VPS",
+				skills: ["EC2, Contabo, Physical server"],
+			},
+		];
+		const generateSkills = (skills: Array<any>) =>
+			skills.map((item, inx) => (
+				<Row key={`${item.type}_${inx}`}>
+					<Col md={3} sm={4} xs={5} className="bold">
+						{item.type}
+					</Col>
+					<Col md={9} sm={8} xs={7} className={item.className ?? ""}>
+						{item.skills.map((skill: any, i: number) => (
+							<Row key={`skill_${i}`}>
+								<Col md={12}>{skill}</Col>
+							</Row>
+						))}
+					</Col>
+				</Row>
+			));
+		return (
+			<Row>
+				<Col md={12} lg={6}>
+					{generateSkills(leftSkills)}
+				</Col>
+				<Col md={12} lg={6}>
+					{generateSkills(rightSkills)}
+				</Col>
+			</Row>
+		);
+	}
 }
 
 export default App;
