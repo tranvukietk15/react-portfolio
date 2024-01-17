@@ -7,7 +7,7 @@ function Projects() {
 			time: "Jun 2023 - Present",
 			name: "WellBarrier",
 			company: "Restaff",
-			teamSize: 30,
+			teamSize: 35,
 			position: "Senior fullstack developer",
 			detail: `WELLBARRIER is a web-based project
 			for drawing wells and barriers. It allows
@@ -22,7 +22,7 @@ function Projects() {
 			ensure safety with barrier, monitoring, and
 			qualification systems. Most oil wells in the
 			world currently use WELLBARRIER.`,
-			technologies: `Nodejs, .Net 6, Multi Tenant, Typescript, Javascript, ReactJS, Redux,
+			technologies: `Nodejs, .Net 6, Jest, Multi Tenant, Typescript, Javascript, ReactJS, Redux,
 			d3js, MSSQL, Redis.`,
 			contributed: [
 				`Init project Unit Test with xUnit.`,
@@ -57,6 +57,8 @@ function Projects() {
 				`Init project and apply clean architecture.`,
 				`Get data from CoinGecko, TrustWallet and store to data warehouse.`,
 				`Implement social login with Duende Identity OAuth2 standard.`,
+				`Social login facebook, twitter with web3.`,
+				`Webhook discord, telegram.`,
 				`Versioning API`,
 				`Implement 2-Factor Authentication.`,
 				`Install and configs Nexus Sonatype store docker hub.`,
@@ -156,11 +158,11 @@ function Projects() {
 		},
 		{
 			time: "Jul 2021 - Dec 2021",
-			name: "Swap",
-			company: "Nashtech",
+			name: "Transwap",
+			company: "Transwap",
 			teamSize: 50,
 			position: "Software engineer",
-			detail: `Swap is a cross-border payment platform for businesses and everyday people who seek to make payments overseas while reducingFX costs and complexity. We offer the most competitive rates throughour proprietary online transaction portal and a wide network of FXPartners to enable our users to fulfil global payments at the lowest costefficiently.In addition to Swap’s online transaction portal, cross-borderpayments provided by Swap are also available on the NetworkedTrade Platform (“NTP”) Value Added Service (“VAS”) provider listing.As an NTP VAS provider, Swap is part of the vibrant tradeecosystem that is the NTP – a Singapore Government initiative. Weoffer a cost-effective and convenient solution to importers and exporters seeking to make or collect payments internationally.`,
+			detail: `Transwap is a cross-border payment platform for businesses and everyday people who seek to make payments overseas while reducingFX costs and complexity. We offer the most competitive rates throughour proprietary online transaction portal and a wide network of FXPartners to enable our users to fulfil global payments at the lowest costefficiently.In addition to Swap’s online transaction portal, cross-borderpayments provided by Swap are also available on the NetworkedTrade Platform (“NTP”) Value Added Service (“VAS”) provider listing.As an NTP VAS provider, Swap is part of the vibrant tradeecosystem that is the NTP – a Singapore Government initiative. Weoffer a cost-effective and convenient solution to importers and exporters seeking to make or collect payments internationally.`,
 			technologies: `Net Core 5, Microservice, SQL, Azure Devops, Azure Service bus, Mailgun, K8s, DDD, TDD, Onion Architecture, SignalR, XUnit, Moq, Proxy, Automapper, design pattern: CQRS, repository, proxy.`,
 			contributed: [
 				`Write Unit Test.`,
@@ -274,17 +276,17 @@ function Projects() {
 						</Row>
 						<Row>
 							<Col xs={4} className="pr-0">
-								Team size
-							</Col>
-							<Col xs={8}>{d.teamSize}</Col>
-						</Row>
-						<Row>
-							<Col xs={4} className="pr-0">
 								Position
 							</Col>
 							<Col xs={8} className="bold">
 								{d.position}
 							</Col>
+						</Row>
+						<Row>
+							<Col xs={4} className="pr-0">
+								Members
+							</Col>
+							<Col xs={8}>{d.teamSize}</Col>
 						</Row>
 					</Col>
 					<Col lg={9} xs={12} className={d.className}>

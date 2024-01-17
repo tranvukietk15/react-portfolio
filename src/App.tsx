@@ -4,6 +4,7 @@ import { MdEmail } from "react-icons/md";
 import { FaBirthdayCake, FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import { SiGooglestreetview } from "react-icons/si";
 import avatar from "./resume/avatar.jpeg";
+import certificate from "./certificate.jpg";
 import Projects from "./resume/projects";
 import PetProjects from "./resume/pet-projects";
 import { SiLeetcode } from "react-icons/si";
@@ -64,10 +65,10 @@ function App() {
 									</Col>
 									<Col md={10} xs={10}>
 										<a
-											href="https://cv.kiettranv.uk"
+											href="https://resume.kiettranv.uk"
 											title="CV Tran Vu Kiet"
 										>
-											cv.kiettranv.uk
+											resume.kiettranv.uk
 										</a>
 									</Col>
 								</Row>
@@ -102,7 +103,7 @@ function App() {
 					</Col>
 					<Col lg={9} xs={12}>
 						<div className="name">Trần Vũ Kiệt</div>
-						<div className="position">BACKEND DEVELOPER</div>
+						<div className="position">FULLSTACK DEVELOPER</div>
 						<div className="summary">
 							Highly experienced full-stack developer with over 5
 							years of experience building and maintaining web
@@ -133,7 +134,7 @@ function App() {
 						</div>
 						<div>
 							My goals: I am passionate about the cryptocurrency
-							market and I see the huge potential of Web3. That's
+							market and I see the huge potential of Web3. That is
 							why I want to switch from Web2 programming to Web3
 							programming. My goal is to become an expert in Web3
 							technology in the future.
@@ -196,8 +197,10 @@ function App() {
 		const leftSkills = [
 			{
 				type: "Backend",
-				skills: ["NodeJS Typescript, .NET core"],
+				skills: ["NodeJS Typescript, .NET core, Basic Solidity"],
 				className: "bold",
+				certificate:
+					"https://www.udemy.com/certificate/UC-107775f7-d760-4c79-997f-93695e16ed95/",
 			},
 			{
 				type: "FrontEnd",
@@ -226,7 +229,7 @@ function App() {
 				skills: ["Azure pipeline, Jenkins"],
 			},
 			{
-				type: "Hosting/DNS",
+				type: "Hosting",
 				skills: ["Cloudflare"],
 			},
 			{
@@ -246,6 +249,22 @@ function App() {
 								<Col md={12}>{skill}</Col>
 							</Row>
 						))}
+						{item.certificate && (
+							<div className="review-container">
+								<a
+									target="blank"
+									href="https://www.udemy.com/certificate/UC-107775f7-d760-4c79-997f-93695e16ed95/"
+									className="review-link"
+								>
+									Solidity Certificate
+									<img
+										src={certificate}
+										alt="Review Image"
+										className="review-image"
+									/>
+								</a>
+							</div>
+						)}
 					</Col>
 				</Row>
 			));

@@ -101,6 +101,32 @@
   text-decoration: underline;
 }
 
+.review-link {
+  position: relative;
+}
+
+.review-image {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(10%, 20%);
+  width: 1px;
+  height: auto;
+  /* width: 400px;
+  height: auto; */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border: solid 1px #000;
+  border-radius: 5px;
+}
+
+.review-link:hover .review-image {
+  opacity: 1;
+  width: 400px;
+  /* Adjust the width as needed */
+  height: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -117,12 +143,12 @@
 
 .work-exp img {
   /* Replace with a smaller image for smaller screens */
-  content: url("test.svg");
+  content: url("horizontal-work.svg");
 }
 
 @media (max-width: 768px) {
   .work-exp img {
     /* Replace with a smaller image for smaller screens */
-    content: url("we2.svg");
+    content: url("vertical-work.svg");
   }
 }
