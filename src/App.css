@@ -50,6 +50,7 @@
 .App .summary {
   font-size: 13pt;
   text-indent: 20px;
+  text-align: justify;
 }
 
 .App .title {
@@ -97,6 +98,10 @@
   padding-right: 0;
 }
 
+.App .p0 {
+  padding: 0;
+}
+
 .App .td-under {
   text-decoration: underline;
 }
@@ -141,9 +146,15 @@
   justify-content: center !important;
 }
 
+.img-center {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .work-exp img {
-  /* Replace with a smaller image for smaller screens */
-  content: url("horizontal-work.svg");
+  /* Replace with a larger image for smaller screens */
+  content: url("work.svg");
 }
 
 @media (max-width: 768px) {

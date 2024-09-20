@@ -1,12 +1,12 @@
 import { Fragment } from "react";
 import { Row, Col } from "react-bootstrap";
-import test from "./test.svg";
+
 function WorkExperience() {
 	return (
 		<Fragment>
 			<Row>
 				<Col xs={12} className="work-exp">
-					<img src={test} alt="Kiet Tran" style={{ width: "100%" }} />
+					<img src={""} alt="work experience" style={{ width: "100%" }} className="img-center" />
 				</Col>
 			</Row>
 		</Fragment>
